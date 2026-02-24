@@ -32,6 +32,39 @@ function jobCounter() {
     rejectedApp.innerText = rejected;
 }
 
+// Toggle Filter Buttons (All, Interview, Rejected)
+function toggleStyle(id) {
+    const filterButtons = document.getElementById("filter-buttons");
+    const filterBtn = filterButtons.getElementsByTagName("button");
+
+    for (let i = 0; i < filterBtn.length; i++) {
+        let btn = filterBtn[i];
+
+        if (btn.id === id) {
+            // Styles for Active Filter Button
+            btn.classList.add("bg-[#3b82f6]", "text-white");
+            btn.classList.remove("bg-white", "text-[#64748b]", "hover:text-[#3b82f6]", "hover:border-[#3b82f6]");
+
+            // Update currentFilter Status
+            if (id === "all-filter-btn") {
+                currentFilter = "all";
+            } else if (id === "interview-filter-btn") {
+                currentFilter = "interview";
+            } else if (id === "rejected-filter-btn") {
+                currentFilter = "rejected";
+            }
+
+        } else {
+            // Styles for Inactive Filter Button
+            btn.classList.remove("bg-[#3b82f6]", "text-white");
+            btn.classList.add("bg-white", "text-[#64748b]", "hover:text-[#3b82f6]", "hover:border-[#3b82f6]");
+        }
+    }
+
+    // Load Jobs
+    getJobs();
+}
+
 // Get All Jobs
 function getJobs() {
     allJobs.innerHTML = "";
