@@ -163,4 +163,17 @@ allJobs.addEventListener("click", function (e) {
         getJobs();
     }
 
+    // Delete Job
+    if (btn.classList.contains("delete-btn")) {
+        alert("Are you sure you want to delete this job?");
+        for (let i = 0; i < jobs.length; i++) {
+            if (jobs[i].id === jobId) {
+                jobs.splice(i, 1);
+                break;
+            }
+        }
+        getJobs();
+        return;
+    }
+
 });
