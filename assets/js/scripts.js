@@ -126,9 +126,9 @@ function getJobs() {
             <span class="${jobStatusStyle} text-sm font-medium leading-5 uppercase inline-block py-2 px-3 rounded-md">${job.status === "" ? "Not Applied" : job.status}</span>
             <p class="text-[#323b49] text-sm leading-5">${job.description}</p>
         </div>
-        <div class="flex items-center gap-2">
-            <button data-id="${job.id}" data-status="interview" class="text-sm font-semibold leading-5 uppercase py-2 px-3 border border-[#10b981] rounded-md cursor-pointer bg-white text-[#10b981] hover:bg-green-50">Interview</button>
-            <button data-id="${job.id}" data-status="rejected" class="text-sm font-semibold leading-5 uppercase py-2 px-3 border border-[#EF4444] rounded-md cursor-pointer bg-white text-[#EF4444] hover:bg-red-50">Rejected</button>
+        <div class="flex items-center flex-wrap sm:flex-nowrap gap-2">
+            <button data-id="${job.id}" data-status="interview" class="text-sm font-semibold leading-5 uppercase py-2 px-3 border border-[#10b981] rounded-md cursor-pointer bg-white text-[#10b981] hover:bg-green-50 w-full sm:w-auto">Interview</button>
+            <button data-id="${job.id}" data-status="rejected" class="text-sm font-semibold leading-5 uppercase py-2 px-3 border border-[#EF4444] rounded-md cursor-pointer bg-white text-[#EF4444] hover:bg-red-50 w-full sm:w-auto">Rejected</button>
         </div>`;
 
         allJobs.appendChild(newDiv);
