@@ -48,6 +48,16 @@
             <p class="text-[#64748B] text-[16px] font-medium leading-5"><span id="total-jobs">0</span> jobs</p>
         </div>
 
+        <!-- Filter Buttons -->
+        <div id="filter-btn" class="flex items-center gap-2 mb-4">
+            <button id="all-filter-btn" onclick="toggleStyle('all-filter-btn')"
+                class="bg-[#3b82f6] text-white text-[12px] font-medium text-center leading-none py-2 px-3 border border-[#f1f2f4] transition-colors duration-300 rounded-sm w-20 h-8 cursor-pointer">All</button>
+            <button id="interview-filter-btn" onclick="toggleStyle('interview-filter-btn')"
+                class="bg-white text-[#64748b] hover:text-[#3b82f6] text-[12px] font-medium text-center leading-none py-2 px-3 border border-[#f1f2f4] hover:border-[#3b82f6] transition-colors duration-300 rounded-sm w-20 h-8 cursor-pointer">Interview</button>
+            <button id="rejected-filter-btn" onclick="toggleStyle('rejected-filter-btn')"
+                class="bg-white text-[#64748b] hover:text-[#3b82f6] text-[12px] font-medium text-center leading-none py-2 px-3 border border-[#f1f2f4] hover:border-[#3b82f6] transition-colors duration-300 rounded-sm w-20 h-8 cursor-pointer">Rejected</button>
+        </div>
+
     </main>
 
     <!-- Scripts -->
