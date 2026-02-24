@@ -137,3 +137,30 @@ function getJobs() {
     jobCounter();
 }
 getJobs();
+
+// Event Delegation for Update Job Status & Delete Job Permanently
+allJobs.addEventListener("click", function (e) {
+    const btn = e.target.closest("button");
+    if (!btn) {
+        return;
+    }
+
+    const jobId = Number(btn.dataset.id);
+    const jobStatus = btn.dataset.status;
+
+    // Update Job Status
+    if (jobStatus) {
+        for (let i = 0; i < jobs.length; i++) {
+            if (jobs[i].id === jobId) {
+                if (jobs[i].status === jobStatus) {
+                    jobs[i].status = "";
+                } else {
+                    jobs[i].status = jobStatus;
+                }
+                break;
+            }
+        }
+        getJobs();
+    }
+
+});
