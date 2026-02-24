@@ -13,6 +13,25 @@ const noJobs = document.getElementById("no-jobs");
 
 let currentFilter = "all"; // Default Filter: All
 
+// Job Counter (Total, Interview, Rejected)
+function jobCounter() {
+    let total = jobs.length;
+    let interview = 0;
+    let rejected = 0;
+
+    for (let i = 0; i < jobs.length; i++) {
+        if (jobs[i].status === "interview") {
+            interview += 1;
+        } else if (jobs[i].status === "rejected") {
+            rejected += 1;
+        }
+    }
+
+    totalApp.innerText = total;
+    interviewApp.innerText = interview;
+    rejectedApp.innerText = rejected;
+}
+
 // Get All Jobs
 function getJobs() {
     allJobs.innerHTML = "";
@@ -81,5 +100,7 @@ function getJobs() {
 
         allJobs.appendChild(newDiv);
     }
+    // Show Number in Job Counter
+    jobCounter();
 }
 getJobs();
