@@ -12,7 +12,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="max-w-6xl mx-auto py-15 px-5">
+
+    <!-- Header -->
+    <header class="space-y-5">
+        <h1 class="text-[#002c5c] text-[32px] font-bold leading-8">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div
+                class="bg-white p-5 space-y-2 rounded-lg shadow-sm hover:shadow-md border border-[#f1f2f4] hover:border-[#3b82f6] hover:-translate-y-0.5 transition-all duration-300">
+                <p class="text-sm text-[#323b49] font-medium leading-4.5">Total</p>
+                <p id="total-app" class="text-[#002c5c] text-2xl font-bold leading-7.5">0</p>
+            </div>
+            <div
+                class="bg-white p-5 space-y-2 rounded-lg shadow-sm hover:shadow-md border border-[#f1f2f4] hover:border-[#3b82f6] hover:-translate-y-0.5 transition-all duration-300">
+                <p class="text-sm text-[#323b49] font-medium leading-4.5">Interview</p>
+                <p id="interview-app" class="text-[#10B981] text-2xl font-bold leading-7.5">0</p>
+            </div>
+            <div
+                class="bg-white p-5 space-y-2 rounded-lg shadow-sm hover:shadow-md border border-[#f1f2f4] hover:border-[#3b82f6] hover:-translate-y-0.5 transition-all duration-300">
+                <p class="text-sm text-[#323b49] font-medium leading-4.5">Rejected</p>
+                <p id="rejected-app" class="text-[#EF4444] text-2xl font-bold leading-7.5">0</p>
+            </div>
+        </div>
+    </header>
 
     <!-- Scripts -->
     <script src="./assets/js/scripts.js"></script>
